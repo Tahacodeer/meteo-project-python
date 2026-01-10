@@ -1,3 +1,4 @@
+import os
 from meteo_record import MeteoRecord
 from exceptions import CorruptedDataError
 
@@ -9,7 +10,11 @@ class MeteoDataIterator:
 
     def __iter__(self):
         try:
-            with open(self.filename, "r") as file:
+            
+            BD = os.path.dirname(__file__)
+            file_path = os.path.join(BD, self.filename)
+
+            with open(file_path, "r") as file:
                 next(file)  # ignorer l'en-tête
                 for line in file:
                     parts = line.strip().split(",")
@@ -22,7 +27,6 @@ class MeteoDataIterator:
                     humidity = int(parts[2])
                     rainfall = int(parts[3])
 
-                    # petite imperfection volontaire : pas de contrôle avancé ici
                     yield MeteoRecord(date, temperature, humidity, rainfall)
 
         except FileNotFoundError:
