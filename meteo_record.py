@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-
-
-    
-=======
 class Meteo_record:
     def __init__(self,date,temperature,humidity,rainfall):
         self.__date=date
@@ -21,7 +16,6 @@ class Meteo_record:
     def __repr__(self):
         return f"la date est : {self.__date!r}  la temperature est : {self.temperature!r}  la humidity est :{self.humidity!r}  la rainfall est : {self.rainfall!r}"
     def __self__(self):
-        return f"la date est : {self.__dater} \n la temperature est : {self.temperature} \n la humidity est :{self.humidity} \n la rainfall est : {self.rainfall}"
-"
+        return f"la date est : {self.__dater} \n la temperature est : {self.temperature} \n la humidity est :{self.humidity} \n la rainfall est : {self.__rainfall}"
+
     
->>>>>>> eeb41b4 (created class Meteo_record)
