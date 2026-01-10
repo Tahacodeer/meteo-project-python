@@ -18,3 +18,4 @@ class Meteo_record:
     def __self__(self):
         return f"la date est : {self.__dater} \n la temperature est : {self.temperature} \n la humidity est :{self.humidity} \n la rainfall est : {self.__rainfall}"
 
+print("hello")
