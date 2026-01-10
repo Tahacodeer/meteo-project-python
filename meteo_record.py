@@ -1,21 +1,38 @@
-class Meteo_record:
-    def __init__(self,date,temperature,humidity,rainfall):
-        self.__date=date
-        self.__temperature=temperature
-        self.__humidity=humidity
-        self.__rainfall=rainfall
-    @property
-    def date:
-        return self.__date
-    @property
-    def temperature:
-        return self.__temperature
-    @property
-    def rainfall:
-        return self.__rainfall
-    def __repr__(self):
-        return f"la date est : {self.__date!r}  la temperature est : {self.temperature!r}  la humidity est :{self.humidity!r}  la rainfall est : {self.rainfall!r}"
-    def __self__(self):
-        return f"la date est : {self.__dater} \n la temperature est : {self.temperature} \n la humidity est :{self.humidity} \n la rainfall est : {self.__rainfall}"
+class MeteoRecord:
+    def __init__(self, date, temperature, humidity, rainfall):
+        self.__date = date
+        self.__temperature = temperature
+        self.__humidity = humidity
+        self.__rainfall = rainfall
 
-print("hello")
+    @property
+    def date(self):
+        return self.__date
+
+    @property
+    def temperature(self):
+        return self.__temperature
+
+    @property
+    def humidity(self):
+        return self.__humidity
+
+    @property
+    def rainfall(self):
+        return self.__rainfall
+
+    def __repr__(self):
+        return (
+            f"MeteoRecord(date={self.__date!r}, "
+            f"temperature={self.__temperature!r}, "
+            f"humidity={self.__humidity!r}, "
+            f"rainfall={self.__rainfall!r})"
+        )
+
+    def __str__(self):
+        return (
+            f"La date est : {self.__date}\n"
+            f"La température est : {self.__temperature}\n"
+            f"L'humidité est : {self.__humidity}\n"
+            f"La pluie est : {self.__rainfall}"
+        )
